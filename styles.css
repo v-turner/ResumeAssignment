@@ -1,0 +1,73 @@
+/* Vaughn-Rose Turner 
+    January 26, 2023 */
+
+/*
+Color Palette
+
+#56383B - Rose ebony
+#EFA9AE - Cherry blossom pink
+#C4E7D4 - Nyanza
+#8367C7 - Amethyst
+#FFFEFB - Baby powder
+*/
+
+/* GLOBAL STYLES
+-------------------------------------*/
+
+/* Added background color to webpage */
+body {
+    background-color: #FFFEFB;
+}
+
+/* link styles */
+a {
+    color: #8367C7;
+}
+a:hover {
+    color: #C4E7D4;
+    text-decoration: none;
+}
+footer a {
+    color: #FFFEFB;
+}
+footer a:hover {
+    color: #8367C7;
+    text-decoration: none;
+}
+.button {
+    background: #FFFEFB;
+    text-decoration: none;
+}
+
+/* Home 
+-------------------------------------*/
+
+/* Added a background image with the class selector home from the body tag */
+.home {
+    background: url(../images/pexels-dominika-roseclay-14953840.jpg) no-repeat;
+    background-size: cover;
+}
+/* Added opacity background to homepage to make text legible */
+.home .content-wrapper {
+    background: rgb(239 169 174 / 0.8);
+}
+
+/* About/Profile
+-------------------------------------*/
+
+/* Projects/Portfolio
+-------------------------------------*/
+
+/* Work Experience
+-------------------------------------*/
+
+/* Education/Certifications
+-------------------------------------*/
+
+/* Footer
+-------------------------------------*/
+
+footer {
+    background: #56383B;
+    color: #C4E7D4;
+}
