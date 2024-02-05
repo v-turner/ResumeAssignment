@@ -4,70 +4,304 @@
 /*
 Color Palette
 
-#56383B - Rose ebony
-#EFA9AE - Cherry blossom pink
-#C4E7D4 - Nyanza
-#8367C7 - Amethyst
-#FFFEFB - Baby powder
+Brunswick green - #004741
+Jasmine - #FFE483
+Brown - #A43700
+Cambridge blue - #82AEA7
+Baby Powder - #FFFCF6
 */
 
 /* GLOBAL STYLES
 -------------------------------------*/
 
-/* Added background color to webpage */
+/* Added box-sizing property to the entire HTML file and with universal selector */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Added height style to the html and body for the background image */
+html, body {
+    height: 100%;
+}
+
+/* Removed the default margin from the body */
 body {
-    background-color: #FFFEFB;
+    margin: 0;
 }
 
 /* link styles */
 a {
-    color: #8367C7;
+    color: #A43700;
 }
 a:hover {
-    color: #C4E7D4;
+    color: #FFE483;
     text-decoration: none;
 }
 footer a {
-    color: #FFFEFB;
+    color: #FFFCF6;
 }
 footer a:hover {
-    color: #8367C7;
+    color: #FFE483;
     text-decoration: none;
 }
 .button {
-    background: #FFFEFB;
+    background: #FFFCF6;
     text-decoration: none;
+    font-family: 'Palanquin Dark', sans-serif;
+    font-size: 15px;
+    padding: 5px;
+}
+.download-link {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+}
+
+/* Added style to the main content information */
+.content-wrapper {
+    margin: 0 auto;
+    padding: 0px;
+    max-width: 1260px;
+}
+
+/* Added style to the main section elements separating them from the content information */
+.main-section {
+    margin-bottom: 50px;
+}
+.main-section h2 {
+    border-bottom: 6px double #FFE483;
+}
+
+/* Added font style to the class "main-section" for the h2 tag */
+.main-section h2 {
+    font-size: 40px;
+    font-family: 'Lobster Two', sans-serif;
+    text-align: center;
+    text-shadow: 3px 2px 2px #000000;
+    color: #A43700;
+    margin: 0 0 5px;
 }
 
 /* Home 
 -------------------------------------*/
 
 /* Added a background image with the class selector home from the body tag */
+/* Added flex properties to create a sticky footer */
 .home {
-    background: url(../images/pexels-dominika-roseclay-14953840.jpg) no-repeat;
+    background: url(../images/pexels-dominika-roseclay-14953840.jpg) no-repeat fixed;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
 }
-/* Added opacity background to homepage to make text legible */
+
+/* Moved opacity background properties to content-background class */
+/* Added flex properties to create a sticky footer */
 .home .content-wrapper {
-    background: rgb(239 169 174 / 0.8);
+    flex: 1 0 auto;
+}
+
+/* Moved the background color from the content-wrapper class & added it to the content-background class */ 
+/* Added padding to the main content information */
+.content-background {
+    background: rgb(130 174 167 / 0.8);
+    padding: 0;
 }
 
 /* About/Profile
 -------------------------------------*/
 
+/* Added header image using a descendant selector with a pseudo-class of before */
+.content-wrapper header::before {
+    background: url(../images/pexels-pok-rie-268261.jpg) center;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 165px;
+}
+
+/* Added font style to the id "header-style" for the h1, h2, and p tags in the header tag */
+#header-style h1 {
+    font-size: 65px;
+    font-family: 'Lobster Two', sans-serif;
+    font-style: italic;
+    color: #A43700;
+    text-shadow: 5px 3px 3px #000000;
+    text-align: center;
+    margin: 13px 0px 5px;
+}
+#header-style h2 {
+    font-size: 26px;
+    font-family: 'Palanquin Dark', sans-serif;
+    text-align: center;
+    text-shadow: 3px 2px 2px #000000;
+    color: #A43700;
+    margin: 0;
+}
+#header-style p {
+    font-size: 20px;
+    font-family: 'Palanquin Dark', sans-serif;
+    text-align: justify;
+    margin: 18px 0 65px;
+    padding: 0px 100px 20px;
+}
+
 /* Projects/Portfolio
 -------------------------------------*/
+
+/* Added style to keep elements floated in their containers and be spaced accordingly */
+.project-item {
+    display: flow-root;
+    margin: 15px 0 20px;
+    padding: 20px;
+}
+
+/* Added style to the project images for text to float beside them and be spaced accordingly */
+.project-item img {
+    width: 300px;
+    float: left;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+/* Added font style to the id "project-section" for the p tag */
+#project-section {
+    font-size: 17px;
+    font-family: 'Palanquin Dark', sans-serif;
+    text-align: center;
+    margin: 5px 0;
+}
+
+/* Added font style to the id "project-name" for the h3 tag to align the text */
+#project-name {
+    text-align: center;
+}
+
+/* Added font style to the class "project-item" for the h3 and p tags */
+.project-item h3 {
+    font-size: 26px;
+    font-family: 'Palanquin Dark', sans-serif;
+    margin: 0 0 25px;
+    padding: 0 20px;
+}
+.project-item p {
+    font-size: 20px;
+    font-family: 'Palanquin Dark', sans-serif;
+    text-align: left;
+    margin: 0 0 15px;
+    padding: 0 20px;
+}
 
 /* Work Experience
 -------------------------------------*/
 
+/* Added a display property with a grid value to create two column information */
+.work-item {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    column-gap: 20px;
+}
+
+/* Added font style to the class "work-details" for the h3 tag */
+.work-details h3 {
+    font-size: 26px;
+    font-family: 'Palanquin Dark', sans-serif;
+    text-align: left;
+    margin: 25px 25px 10px;
+    padding-left: 20px;
+}
+
+/* Added font style to the class "work-details" for the p tags */
+.work-details p {
+    font-size: 22px;
+    font-family: 'Palanquin Dark', sans-serif;
+    text-align: left;
+    margin: 10px 25px;
+    padding: 10px 20px;
+}
+
+/* Added font style to the class "work-summary" for the p tag */
+.work-summary p {
+    font-size: 20px;
+    font-family: 'Palanquin Dark', sans-serif;
+    text-align: left;
+    margin: 18px 18px 18px 65px;
+    padding: 8px 20px;
+}
+
 /* Education/Certifications
 -------------------------------------*/
+
+/* Added a display property with a grid value to create two column information */
+.school-info {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    column-gap: 20px;
+}
+
+/* Added font style to the class "school-info" for the h3 tag */
+.school-info h3 {
+    font-size: 26px;
+    font-family: 'Palanquin Dark', sans-serif;
+    text-align: left;
+    margin: 25px 25px 10px;
+    padding-left: 20px;
+}
+
+/* Added font style to the class "school-details" for the p tags */
+.school-details p {
+    font-size: 20px;
+    font-family: 'Palanquin Dark', sans-serif;
+    text-align: left;
+    margin: 18px 18px 18px 65px;
+    padding: 8px 20px;
+}
 
 /* Footer
 -------------------------------------*/
 
+/* Added color to the footer elements */
+/* Changed the position of the footer elements by changing the display value */
 footer {
-    background: #56383B;
-    color: #C4E7D4;
+    background: #004741;
+    color: #FFE483;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+/* Added font style to the Footer section */
+#footer-style h2 {
+    font-size: 22px;
+    font-family: 'Palanquin Dark', sans-serif;
+    text-shadow: 4px 3px 2px #000000;
+}
+#footer-style a{
+    font-size: 14px;
+    font-family: 'Palanquin Dark', sans-serif;
+}
+
+/* Removed the bullet points and spacing from social media icons */
+.socials {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Set the social media icons as inline block elements */
+.socials li {
+    display: inline-block;
+    margin: 3px;
+}
+
+/* Set the size of the social media icons */
+.socials img {
+    width: 32px;
+}
+
+/* Set opacity to social media icons when mouse hovers over */
+.socials img:hover {
+    opacity: 0.5;
 }
