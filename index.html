@@ -7,16 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Linked external CSS file -->
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Linked Google Font to file for CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap" rel="stylesheet">
+    
     <!-- Customized title tag to include my information -->
     <title>Vaughn-Rose Turner | Graphic and Web Design Student</title>
   </head>
   <!-- Added a class of "home" to the body tag for CSS purposes -->
   <body class="home">
+    <!-- Added a link with a button feature -->
+    <a class="button download-link" href="#">Download PDF</a>
   <!-- Wrapped a div tag around the main tag & added a class of "content-wrapper" to the div tag -->
   <div class="content-wrapper">
+      <!-- Wrapped a second div tag around the main element adding a class of "content-background" -->
+      <div class="content-background">
     <main>
       <!-- ***********************  ABOUT / PROFILE  *********************** -->
-      <header>
+      <header id="header-style">
         <!-- Added my name and what I do to the h1 & h2 tags -->
         <h1>Vaughn-Rose Turner</h1>
         <h2>Graphic and Web Designer | Student</h2>
@@ -26,25 +36,32 @@
       </header>
 
       <!-- ********************  PROJECTS / PORTFOLIO  ********************* -->
-      <section>
+        <!-- Added a class of "main-section" to the section element wrapped around the Projects/Portfolio information -->
+      <section class="main-section">
         <h2>Featured Projects</h2>
         <!-- Removed the link to "christinatruong.com" regarding more information on projects to make the site personalized to me -->
-        <p>View selected projects below.</p>
+        <!-- Added an id called "project-section" to add font style in CSS file -->
+        <p id="project-section">View selected projects below.</p>
 
         <!-- Copy the whole <section> block to add more projects. -->
         <!-- Added information about web project I completed -->
-        <section>
-          <h3>Sprout and Grow | Organic Gardening Website</h3>
+        <!-- Added a class of "project-item" to the Featured Projects section opening tag -->
+        <section class="project-item">
+            <!-- Added an id of "project-name" to the h3 tag to style in the CSS file -->
+          <h3 id="project-name">Sprout and Grow | Organic Gardening Website</h3>
           <!-- Inserted image of web project homepage I created -->
           <img src="images/sprout-and-grow-homepage.png" alt="Sprout and Grow Organic Gardening Homepage Image">
           <!-- Added description of web project -->
           <p>For this project, I was tasked with creating a website, in the design form of a blog, to attract an audience of beginner to advanced gardening enthusiasts to learn more about the practice of organic gardening.</p>
           <!-- Inserted link to full project website -->
+            <!-- Added a class called "button" to the link tag -->
           <a class="button" href="https://wcet.waketech.edu/vturner/WEB140/sproutandgrow/index.html" target="_blank">View project</a>
         </section>
         <!-- Added information about graphic design project I completed -->
-        <section>
-          <h3>Fictional Magazine Cover</h3>
+          <!-- Added a class of "project-item" to the Featured Projects section opening tag -->
+        <section class="project-item">
+            <!-- Added an id of "project-name" to the h3 tag to style in the CSS file -->
+          <h3 id="project-name">Fictional Magazine Cover</h3>
           <!-- Inserted image of fictional magazine cover I created -->
           <img src="images/magazine-cover.jpg" alt="Fictional Magazine Cover Image">
           <!-- Added description of graphic design project -->
@@ -55,47 +72,69 @@
       </section>
 
       <!-- ***********************  WORK EXPERIENCE  *********************** -->
-      <section>
+        <!-- Added a class of "main-section" to the section element wrapped around the Work Experience information -->
+      <section class="main-section">
         <h2>Work Experience</h2>
         <!-- Removed the paragraph tag for optional job information -->
 
         <!-- Copy this whole <section> block to add more jobs. -->
         <!-- Inserted information about the last job I had pre-COVID before Wake Tech -->
-        <section>
+          <!-- Added a class of "work-item" to the section tag -->
+        <section class="work-item">
+        <!-- Wrapped a div element around the h3 and p tags and created a class called "work-details" in the opening div tag -->
+        <div class="work-details">
           <h3>Retail Cashier | Sales floor | Stocker</h3>
           <p>Ross Dress for Less</p>
           <p>12/2019 - 03/2020</p>
+        </div>
+
+        <!-- Wrapped a div element around the p tag and created a class called "work-summary" in the opening div tag -->
+        <div class="work-summary">
           <p>Responsibilities for this job entailed ringing customer items bought, making sure the entire store merchandise was kept organized on the sales floor, and also stocking and restocking shelves with merchandise.</p>
+        </div>
         </section>
         <!-- End of Job block. -->
       </section>
 
       <!-- ******************  EDUCATION & CERTIFICATIONS ****************** -->
-      <section>
+        <!-- Added a class of "main-section" to the section element wrapped around the Education & Certifications information -->
+      <section class="main-section">
         <h2>Education</h2>
 
         <!-- Copy this whole <section> block to add more schools. -->
         <!-- Inserted Wake Tech information -->
-        <section>
+        <!-- Added a class of "school-info" to the section tag -->
+        <section class="school-info">
           <h3>Wake Technical Community College - Raleigh, NC</h3>
+
+        <!-- Wrapped a div element around the p tags and created a class called "school-details" in the opening div tag -->
+        <div class="school-details">
           <p>Advertising and Graphic Design Student | 09/2022 - 05/2024</p>
           <p>Received certification in Graphic Design from the Advertising and Graphic Design program. Currently completing certification for Web and Graphic Design in the Advertising and Graphic Design program.</p>
+        </div>
         </section>
         <!-- Inserted my high school information -->
-        <section>
+        <!-- Added a class of "school-info" to the section tag -->
+        <section class="school-info">
           <h3>Hilton Head Island High School - Hilton Head, SC</h3>
+
+        <!-- Wrapped a div element around the p tags and created a class called "school-details" in the opening div tag -->
+        <div class="school-details">
           <p>High School Student | 08/2014 - 05/2018</p>
           <p>High School Graduate | Diploma received</p>
+        </div>
         </section>
         <!-- End of School block. -->
       </section>
 
       <!-- *****************  CONTACT INFO / SOCIAL MEDIA  ***************** -->
-      <footer>
+        <!-- Added an id of "footer-style" to the opening footer tag to add font style in CSS -->
+      <footer id="footer-style">
         <h2>Let's Keep in Touch!</h2>
 
         <!-- Social media and contact links. Add or remove any networks. -->
-        <ul>
+        <!-- Added a class of "socials" to the ul opening tag to style social media icons -->
+        <ul class="socials">
           <!-- Replaced the example email address with my Wake Tech student email address -->
           <li><a href="mailto:email@example.com">vturner@my.waketech.edu</a></li>
           <!-- Inserted link to the homepage for Instagram -->
@@ -107,6 +146,7 @@
         </ul>
       </footer>
     </main>
+    </div>
   </div>
   </body>
 </html>
